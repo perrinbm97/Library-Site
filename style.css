@@ -112,14 +112,14 @@ a:hover {
   opacity: 0;
 }
 
-.menu--open .menu__backdrop{
-    visibility: visible;
-    opacity: 1;
+.menu--open .menu__backdrop {
+  visibility: visible;
+  opacity: 1;
 }
 
-.menu--open{
-    max-height: 100vh;
-    overflow-y: hidden;
+.menu--open {
+  max-height: 100vh;
+  overflow-y: hidden;
 }
 
 .menu__links {
@@ -129,7 +129,7 @@ a:hover {
 }
 
 .menu__link {
-    font-size: 40px;
+  font-size: 40px;
   color: white;
 }
 
@@ -158,7 +158,7 @@ header {
 .header__container {
   height: 100%;
   width: 100%;
-  max-width: 880px;
+  max-width: 720px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -301,7 +301,7 @@ button:active {
   background-color: rgba(115, 66, 214, 0.1);
 }
 
-.book__list {
+.books {
   display: flex;
   flex-wrap: wrap;
 }
@@ -315,6 +315,8 @@ button:active {
   max-height: 380px;
   transition: all 300ms ease;
   cursor: no-drop;
+  object-fit: contain;
+  object-position: left;
 }
 
 .book__img--wrapper {
@@ -383,46 +385,107 @@ footer {
   padding: 0 8px;
 }
 
+/* BOOKS PAGE */
+
+#books__body {
+  background-color: rgba(115, 66, 214, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#books__main {
+  flex: 1;
+}
+
+.books__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.books__header--title {
+  margin-bottom: 0;
+}
+
+select {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  height: 40px;
+  line-height: 40px;
+  outline: none;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 200px;
+}
+
 /* SMARTPHONES, TABLETS */
 
-@media (max-width: 768px){
-  .header__description{
+@media (max-width: 768px) {
+  .header__description {
     padding: 0 24px;
   }
 
-  h1{
+  h1 {
     font-size: 40px;
   }
 
-  h2{
+  h2 {
     font-size: 26px;
   }
 
-  button{
+  button {
     font-size: 18px;
   }
 
-  .book{
+  .book {
+    width: 50%;
+  }
+}
+
+/* TABLETS */
+
+@media (max-width: 768px) {
+  .header__description {
+    padding: 0 24px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  .book {
     width: 50%;
   }
 }
 
 /* SMALL PHONES */
 
-@media (max-width: 550px){
-    .nav__links{
-        display: none;
-    }
+@media (max-width: 550px) {
+  .nav__links {
+    display: none;
+  }
 
-    .btn__menu{
-        display: block;
-    }
+  .btn__menu {
+    display: block;
+  }
 
-    .highlight{
-      width: 100%;
-    }
+  .highlight {
+    width: 100%;
+  }
 
-    .highlight:not(:last-child){
-      margin-bottom: 24px;
-    }
+  .highlight:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }
